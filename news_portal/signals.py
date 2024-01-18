@@ -52,4 +52,4 @@ def post_limit(sender, instance, **kwaargs):
     today = datetime.date.today()
     post_limit = Post.objects.filter(author=instance.author, time_in__date=today).count()
     if post_limit >= 3:
-        raise ValidationError('Нельзя публиковать больше трёх постов в сутки!')ers_emails)
+        raise ValidationError('Нельзя публиковать больше трёх постов в сутки!')
