@@ -11,7 +11,8 @@ from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Category
 
-from django.db.models.signals import post_save
+from django.views.decorators.cache import cache_page
+@cache_page(60 * 15)
 
 
 
